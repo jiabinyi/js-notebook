@@ -79,4 +79,14 @@ function Setcookie (name, value)
    //即document.cookie= name+"="+value+";path=/";   时间可以不要，但路径(path)必须要填写，因为JS的默认路径是当前页，如果不填，此cookie只在当前页面生效！~
 }
 
-
+	let jsontoQuery=(json)=>{
+				let str = "";
+				let query = "";
+				for(let i in json){
+					
+						str+= i + "=" + json[i] + "&"//json[i][j]是属性值
+					
+				}
+				query=str.substring(0,str.length-1);
+				return query;
+	}
